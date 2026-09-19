@@ -1,0 +1,26 @@
+# Node / frontend
+node_modules/
+dist/
+build/
+.vite/
+
+# Python / backend
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Environment secrets
+.env
+.env.local
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

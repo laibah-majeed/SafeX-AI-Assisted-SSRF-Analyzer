@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0b0f14;
+  background-image:
+    radial-gradient(circle at 10% -10%, rgba(79, 209, 197, 0.06), transparent 40%),
+    radial-gradient(circle at 90% 0%, rgba(240, 87, 107, 0.05), transparent 35%);
+}
+
+::selection {
+  background-color: rgba(79, 209, 197, 0.35);
+}
+
+/* Visible keyboard focus, kept consistent app-wide */
+:focus-visible {
+  outline: 2px solid #4fd1c5;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.scan-pulse {
+  animation: scan-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes scan-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
